@@ -6,7 +6,7 @@ Movimiento con GSAP + ScrollTrigger (cdnjs); sin JS o con "reducir movimiento" l
 ## Pendiente (necesita a Álvaro / Mónica)
 1. Fotos reales de sus manos y trabajos: ombré, francesa y pedicura son provisionales (IA/stock). Local y herramientas también.
 2. Confirmar precios y horario (el schema lleva L-V 10-20, S 10-14 provisional).
-3. Dominio final en canonical, og:image y schema image.
+3. Dominio: www.laboutiquedelamanicura.es (principal; el dominio sin www redirige). Ya en canonical, og, schema, robots y sitemap.
 4. Logo: integrados los PNG transparentes de Álvaro (horizontal en cabecera y pie, símbolo en favicon). Idealmente pedir los originales en SVG para máxima nitidez en pantallas retina.
 5. GA4/GTM: los clics de WhatsApp, teléfono y Booksy ya empujan `cta_click` a dataLayer (atributo data-cta). Marcar como conversiones.
 6. Reclamar Bing Places y Apple Business Connect; mismos NAP en web, Google, Booksy y Fresha.
