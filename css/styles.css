@@ -367,3 +367,11 @@ p{margin:0 0 1em}
 .gal-cta{margin:clamp(28px,4vw,48px) 0 0;display:flex;justify-content:center}
 .gal-cta .btn{gap:.6rem}
 .gal-cta .ic{width:22px;height:22px}
+
+/* portada con más color */
+.hero{background:radial-gradient(70% 60% at 85% 30%,rgba(240,180,166,.55),transparent 70%),var(--paper)}
+.hero-visual::before{content:"";position:absolute;right:-1.5rem;top:2.2rem;bottom:1rem;width:84%;background:var(--rose);border-radius:50% 50% 28px 28px/40% 40% 28px 28px;transform:rotate(5deg);z-index:0}
+.hero-visual::after{content:"";position:absolute;left:-2rem;top:-1.5rem;width:92px;height:92px;border-radius:50%;background:var(--peach);z-index:0}
+.hero-visual .arch,.hero-visual .hv-b,.hero-visual .hv-c,.hero-visual .seal{z-index:1}
+.hero-visual .arch{position:relative}
+.h-hero em{color:var(--rose)}
