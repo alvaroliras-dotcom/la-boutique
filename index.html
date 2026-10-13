@@ -14,11 +14,14 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="La Boutique de las Uñas · Manicura y pedicura en Arroyomolinos">
 <meta property="og:description" content="Uñas que siguen perfectas tres semanas después. Sin estropear tu uña natural. 5★ en 125 reseñas.">
-<meta property="og:image" content="https://www.laboutiquedelamanicura.es/images/monica-alvarez-manicurista.jpg">
+<meta property="og:image" content="https://www.laboutiquedelamanicura.es/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://www.laboutiquedelamanicura.es/">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:locale" content="es_ES">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/styles.css">
 <script type="application/ld+json">
 {
@@ -38,17 +41,136 @@
     "postalCode": "28939",
     "addressCountry": "ES"
   },
-  "geo": { "@type": "GeoCoordinates", "latitude": 40.27325, "longitude": -3.90288 },
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "20:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00" }
-  ],
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "125" },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 40.27325,
+    "longitude": -3.90288
+  },
   "sameAs": [
     "https://booksy.com/es-es/95010_la-boutique-de-las-unas_salon-de-unas_53689_valdefuentes",
     "https://www.fresha.com/lvp/la-boutique-de-las-unas-calle-de-peniscola-arroyomolinos-Y0oXn9",
     "https://www.instagram.com/laboutique3068",
     "https://www.facebook.com/share/1HW4SrSqbq/"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Mónica Álvarez",
+    "jobTitle": "Manicurista"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Arroyomolinos"
+  },
+  "knowsAbout": [
+    "Manicura semipermanente",
+    "Pedicura estética",
+    "Reconstrucción de uñas",
+    "Manicura rusa",
+    "Nail art"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Manicura semipermanente"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Manicura rusa con torno"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Reconstrucción de uñas (gel o AcryGel)"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Extensiones de uñas"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pedicura estética semipermanente"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Decoración y diseño de uñas"
+        }
+      }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿La semipermanente me va a estropear la uña?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No si está bien hecha y bien retirada, que es justo lo que cuido aquí. Trabajo siempre pensando en la salud de tu uña natural; muchas clientas notan que la tienen más fuerte desde que vienen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto me va a durar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lo normal son tres o cuatro semanas perfectas. Depende de tu uña y de tu día a día, pero la durabilidad es justo lo que más valoran mis clientas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta una manicura semipermanente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Desde 9,50 €. Tienes todos los precios en la sección de servicios, sin sorpresas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tengo que pedir cita o puedo pasarme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mejor con cita, así te dedico todo el tiempo sin prisas. Puedes reservar por WhatsApp, por teléfono o en Booksy en un minuto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Y si no sé qué servicio necesito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Escríbeme y te aconsejo. Para eso estoy: te digo lo que de verdad le conviene a tu uña."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hacéis decoración y diseños?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí: francesa, ombré, stamping y decoración a tu gusto, con un montón de colores para elegir."
+      }
+    }
   ]
 }
 </script>
@@ -61,6 +183,8 @@
     <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.07 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0 1 22 16.92Z"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1Z"/></symbol>
     <symbol id="i-almond" viewBox="0 0 20 28"><path fill="currentColor" d="M10 0C15 5 18 11 18 17a8 8 0 0 1-16 0C2 11 5 5 10 0Z"/></symbol>
   </defs>
 </svg>
@@ -89,16 +213,17 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow" data-reveal>Manicura y pedicura en Arroyomolinos</p>
       <h1 class="h-hero">
+        <span class="eyebrow eyebrow-h1" data-reveal>Manicura y pedicura en Arroyomolinos</span>
         <span class="hl"><span>Uñas que siguen</span></span>
-        <span class="hl"><span>perfectas <span class="pill" aria-hidden="true"><img src="images/ombre-rosado-dorado.jpg" alt="" width="400" height="400"></span></span></span>
-        <span class="hl"><span><em>tres semanas</em> después.</span></span>
+        <span class="hl"><span>perfectas</span></span>
+        <span class="hl"><span><em>tres semanas</em></span></span>
+        <span class="hl"><span>después.</span></span>
       </h1>
       <p class="hero-sub" data-reveal>Sin estropear tu uña natural y a un precio que no te va a doler. Aquí no hay prisas ni cadena de montaje: solo Mónica, tu cita y tus uñas bien cuidadas.</p>
       <div class="cta-block" data-reveal>
         <a href="https://wa.me/34669981057?text=Hola%20Mónica,%20me%20gustaría%20pedir%20cita" class="btn btn-wa btn-lg magnet" data-cta="whatsapp-hero" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg><span class="roll"><span>Pedir cita por WhatsApp</span></span></a>
-        <p class="cta-trust">Te respondo yo misma · Sin compromiso · En 1 minuto tienes cita</p>
+        <p class="cta-trust">Te responde Mónica en persona · Sin compromiso</p>
         <p class="cta-secondary">
           <a href="https://booksy.com/es-es/95010_la-boutique-de-las-unas_salon-de-unas_53689_valdefuentes" data-cta="booksy-hero" target="_blank" rel="noopener">Reservar online</a>
           <span aria-hidden="true">·</span>
@@ -108,6 +233,8 @@
     </div>
     <div class="hero-visual" data-reveal>
       <div class="arch"><div class="frame"><img data-parallax src="images/manos-sobre-toalla.jpg" alt="Manos con manicura semipermanente nude sobre una toalla blanca" width="900" height="1350" fetchpriority="high"></div></div>
+      <div class="hv-b" aria-hidden="true"><img src="images/ombre-rosado-dorado.jpg" alt="" width="400" height="400" loading="lazy"></div>
+      <div class="hv-c" aria-hidden="true"><img src="images/francesa-nude.jpg" alt="" width="400" height="400" loading="lazy"></div>
       <div class="seal" aria-hidden="true">
         <svg viewBox="0 0 120 120" class="seal-ring"><defs><path id="sealPath" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#sealPath" textLength="287" lengthAdjust="spacing">5,0 en Google · 125 reseñas · Arroyomolinos · </textPath></text></svg>
         <svg class="seal-core"><use href="#i-almond"/></svg>
@@ -117,7 +244,7 @@
   <div class="wrap">
     <ul class="facts" aria-label="Datos de confianza">
       <li><b class="num"><span data-count="5" data-dec="1">5,0</span><i>★</i></b><span>en Google y Booksy</span></li>
-      <li><b class="num"><span data-count="125" data-pre="+">+125</span></b><span>reseñas de clientas que repiten</span></li>
+      <li><b class="num"><span data-count="125" data-pre="+">+125</span></b><span>reseñas de clientas en Google</span></li>
       <li><b class="num">3–4<small>sem.</small></b><span>de duración, lo normal</span></li>
       <li><b class="num serif-i">Tu uña</b><span>natural, siempre lo primero</span></li>
     </ul>
@@ -161,8 +288,8 @@
       <p data-reveal>Trabajo con una idea muy sencilla: <strong>tu uña natural es lo primero</strong>. Por eso te aconsejo de verdad, aunque eso signifique recomendarte un servicio más sencillo o más barato del que venías a pedir. Lo que me interesa es que salgas con unas uñas preciosas <em>y</em> sanas, y que te duren tanto que vuelvas porque quieres, no porque se te han estropeado.</p>
       <p data-reveal>Llevo años haciéndolo en Arroyomolinos y la mayoría de mis clientas ya no se mueven de aquí. Eso, para mí, es el mejor piropo.</p>
       <figure class="quote-box" data-reveal>
-        <blockquote>Soy peluquera y nunca me habían durado tanto las uñas perfectas. El trato y el servicio, perfecto.</blockquote>
-        <figcaption>Sandra Cañadillas · Google</figcaption>
+        <blockquote>Te aconseja pensando en el bienestar de tus uñas y el esmaltado es súper duradero. Mi sitio de confianza sin ninguna duda.</blockquote>
+        <figcaption>Beatriz Puras · Google</figcaption>
       </figure>
       <a href="https://wa.me/34669981057?text=Hola%20Mónica,%20me%20gustaría%20pedir%20cita" class="btn btn-ghost magnet" data-cta="whatsapp-monica" target="_blank" rel="noopener"><span class="roll"><span>Reservar mi cita con Mónica</span></span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
@@ -225,6 +352,7 @@
       <figure class="g g2" data-reveal><div class="frame"><img data-parallax src="images/francesa-nude.jpg" alt="Manicura semipermanente con francesa fina sobre base nude" width="1000" height="1000" loading="lazy"></div><figcaption><span>[02]</span> Francesa fina</figcaption></figure>
       <figure class="g g3" data-reveal><div class="frame"><img data-parallax src="images/pedicura-coral.jpg" alt="Pedicura estética con esmaltado semipermanente en tono coral" width="1000" height="1000" loading="lazy"></div><figcaption><span>[03]</span> Pedicura estética</figcaption></figure>
     </div>
+    <p class="gal-cta" data-reveal><a class="btn btn-dark" href="https://www.instagram.com/laboutique3068" data-cta="instagram-galeria" target="_blank" rel="noopener me"><svg class="ic" aria-hidden="true"><use href="#i-ig"/></svg><span>Más trabajos en Instagram</span></a></p>
   </div>
 </section>
 
@@ -290,12 +418,11 @@
     <figure class="review"><blockquote>Llegué con mis uñas fatal porque me las mordía y he vuelto a recuperarlas, están genial y súper fuertes. Intactas desde el primer día hasta el último. 100% recomendable.</blockquote><figcaption>Lucía Ortega</figcaption></figure>
     <figure class="review"><blockquote>Soy peluquera y nunca me habían durado tanto las uñas perfectas. El trato y el servicio, perfecto.</blockquote><figcaption>Sandra Cañadillas</figcaption></figure>
     <figure class="review"><blockquote>Trato inmejorable y técnica muy buena. El precio muy bueno, no como en otros centros con precios desorbitados. Se ha convertido en mi centro de referencia.</blockquote><figcaption>María José García</figcaption></figure>
-    <figure class="review"><blockquote>Te aconseja pensando en el bienestar de tus uñas y el esmaltado es súper duradero. Mi sitio de confianza sin ninguna duda.</blockquote><figcaption>Beatriz Puras</figcaption></figure>
     <figure class="review"><blockquote>Mis uñas son muy débiles para semipermanente, pero con el cuidado de Mónica noté la diferencia. Cuidando hasta el mínimo detalle.</blockquote><figcaption>Mairena Casares</figcaption></figure>
     <figure class="review"><blockquote>Descubrí a Mónica cuando me mudé y desde entonces no he cambiado de sitio. Me duran muchísimo y la relación calidad-precio es genial.</blockquote><figcaption>María Díaz</figcaption></figure>
   </div>
   <div class="wrap center">
-    <a href="https://www.google.com/maps/place/La+Boutique+De+Las+U%C3%B1as/" class="btn btn-ghost" data-cta="resenas-google" target="_blank" rel="noopener"><span class="roll"><span>Leer las 125 reseñas en Google</span></span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="https://www.google.com/maps/place/La+Boutique+De+Las+U%C3%B1as/" class="btn btn-dark" data-cta="resenas-google" target="_blank" rel="noopener"><span class="roll"><span>Leer las 125 reseñas en Google</span></span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
   </div>
 </section>
 
@@ -329,7 +456,10 @@
       </p>
     </div>
     <div class="split-media" data-reveal>
-      <iframe class="map" src="https://www.google.com/maps?q=Calle%20de%20Pe%C3%B1%C3%ADscola%2030%2C%20Arroyomolinos&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de La Boutique de las Uñas en Arroyomolinos"></iframe>
+      <div class="map map-lazy" id="mapBox" data-src="https://www.google.com/maps?q=Calle%20de%20Pe%C3%B1%C3%ADscola%2030%2C%20Arroyomolinos&amp;output=embed">
+        <button type="button" class="btn btn-dark" id="mapBtn" data-cta="ver-mapa"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>Ver el mapa</span></button>
+        <p>C. de Peñíscola, 30 · Arroyomolinos</p>
+      </div>
     </div>
   </div>
 </section>
@@ -357,7 +487,7 @@
   <div class="cierre-card dark">
     <div class="cierre-in">
       <h2>Tus próximas uñas favoritas están <em>a un mensaje</em></h2>
-      <p class="lead">Reserva tu cita con Mónica y comprueba por qué más de 125 clientas no se mueven de aquí. Sin prisas, sin sustos en el precio y con unas uñas que te van a durar.</p>
+      <p class="lead">Reserva tu cita con Mónica y comprueba por qué 125 clientas lo han contado en Google. Sin prisas, sin sustos en el precio y con unas uñas que te van a durar.</p>
       <a href="https://wa.me/34669981057?text=Hola%20Mónica,%20me%20gustaría%20pedir%20cita" class="btn btn-wa btn-xl magnet" data-cta="whatsapp-cierre" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg><span class="roll"><span>Pedir cita por WhatsApp</span></span></a>
       <p class="cta-secondary light">
         <a href="https://booksy.com/es-es/95010_la-boutique-de-las-unas_salon-de-unas_53689_valdefuentes" data-cta="booksy-cierre" target="_blank" rel="noopener">Reservar online</a>
@@ -380,16 +510,18 @@
       <div>
         <p class="foot-name">Mónica Álvarez</p>
         <p>C. de Peñíscola, 30, 28939 Arroyomolinos (Madrid)</p>
+        <p class="foot-social">
+          <a href="https://www.instagram.com/laboutique3068" data-cta="instagram-pie" target="_blank" rel="noopener me" aria-label="Instagram de La Boutique de las Uñas"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+          <a href="https://www.facebook.com/share/1HW4SrSqbq/" data-cta="facebook-pie" target="_blank" rel="noopener me" aria-label="Facebook de La Boutique de las Uñas"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+        </p>
       </div>
       <div class="footer-links">
         <a href="https://wa.me/34669981057" data-cta="whatsapp-pie" target="_blank" rel="noopener">WhatsApp 669 98 10 57</a>
         <a href="https://booksy.com/es-es/95010_la-boutique-de-las-unas_salon-de-unas_53689_valdefuentes" target="_blank" rel="noopener">Reservar en Booksy</a>
         <a href="https://www.fresha.com/lvp/la-boutique-de-las-unas-calle-de-peniscola-arroyomolinos-Y0oXn9" target="_blank" rel="noopener">Reservar en Fresha</a>
-        <a href="https://www.instagram.com/laboutique3068" data-cta="instagram-pie" target="_blank" rel="noopener me">Instagram @laboutique3068</a>
-        <a href="https://www.facebook.com/share/1HW4SrSqbq/" data-cta="facebook-pie" target="_blank" rel="noopener me">Facebook</a>
       </div>
     </div>
-    <div class="footer-copy"><p>© 2026 La Boutique de las Uñas · ★ 5,0 en Google (125 reseñas)</p><p>Página web diseñada por <a href="https://elgordoyelflaco.es" target="_blank" rel="noopener">El Gordo y el Flaco Marketing Online</a></p></div>
+    <div class="footer-copy"><p>© 2026 La Boutique de las Uñas · ★ 5,0 en Google (125 reseñas) · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></p><p>Página web diseñada por <a href="https://elgordoyelflaco.es" target="_blank" rel="noopener">El Gordo y el Flaco Marketing Online</a></p></div>
   </div>
 </footer>
 

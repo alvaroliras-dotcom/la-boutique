@@ -27,6 +27,14 @@
     window.dataLayer.push({ event: 'cta_click', cta: a.getAttribute('data-cta'), destino: a.getAttribute('href') });
   });
 
+  /* ---------- Mapa: se carga solo al pulsar (rendimiento y cookies de terceros) ---------- */
+  var mapBtn = d.getElementById('mapBtn'), mapBox = d.getElementById('mapBox');
+  if (mapBtn && mapBox) mapBtn.addEventListener('click', function () {
+    var f = d.createElement('iframe'); f.className = 'map'; f.src = mapBox.getAttribute('data-src');
+    f.title = 'Mapa de La Boutique de las Uñas en Arroyomolinos'; f.referrerPolicy = 'no-referrer-when-downgrade';
+    mapBox.replaceWith(f);
+  });
+
   /* ---------- Opiniones: flechas y «Leer más» ---------- */
   var track = d.getElementById('revTrack');
   function step() { var c = track.querySelector('.review'); return c ? c.getBoundingClientRect().width + 18 : 320; }
@@ -47,16 +55,20 @@
 
   /* ---------- Movimiento ---------- */
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce || !window.gsap || !window.ScrollTrigger) return;
+  /* Ventana altísima = captura de página entera, impresión o rastreador (Google renderiza así):
+     no hay scroll que dispare nada, así que se muestra todo ya, sin capa de movimiento. */
+  function tall() { return window.innerHeight > 2200; }
+  function eagerImages() { d.querySelectorAll('img[loading="lazy"]').forEach(function (i) { i.loading = 'eager'; }); }
+  if (tall()) eagerImages();
+  if (reduce || tall() || !window.gsap || !window.ScrollTrigger) return;
   root.classList.add('motion');
   gsap.registerPlugin(ScrollTrigger);
 
   /* Portada: las líneas del titular suben y la píldora se abre */
-  gsap.from('.h-hero .hl > span', { yPercent: 112, duration: 1.1, ease: 'expo.out', stagger: 0.12, delay: 0.1 });
-  gsap.from('.pill', { scaleX: 0, transformOrigin: 'left center', duration: 1.1, ease: 'expo.out', delay: 0.65 });
+  /* (la entrada de la portada va en CSS: ver styles.css) */
 
   /* Aparición general (una vez) */
-  var reveals = gsap.utils.toArray('[data-reveal]');
+  var reveals = gsap.utils.toArray('[data-reveal]').filter(function (el) { return !el.closest('.hero'); });
   gsap.set(reveals, { opacity: 0, y: 28 });
   ScrollTrigger.batch(reveals, {
     start: 'top 90%', once: true,
@@ -106,6 +118,7 @@
     var end = parseFloat(el.getAttribute('data-count')), dec = parseInt(el.getAttribute('data-dec') || '0', 10),
         pre = el.getAttribute('data-pre') || '', o = { v: 0 };
     function fmt(v) { return pre + (dec ? v.toFixed(dec).replace('.', ',') : Math.round(v)); }
+    el.setAttribute('data-final', el.textContent);
     el.textContent = fmt(0);
     gsap.to(o, { v: end, duration: 1.7, ease: 'power2.out',
       scrollTrigger: { trigger: el, start: 'top 92%', once: true },
@@ -150,9 +163,24 @@
     main.style.marginBottom = on ? footer.offsetHeight + 'px' : '';
   }
   layoutFooter();
-  gsap.fromTo('.foot-in', { y: -70, opacity: 0.35 }, { y: 0, opacity: 1, ease: 'none',
+  gsap.fromTo('.foot-in', { y: -70 }, { y: 0, ease: 'none',
     scrollTrigger: { trigger: main, start: 'bottom bottom', end: function () { return '+=' + footer.offsetHeight; }, scrub: true } });
-  var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { layoutFooter(); ScrollTrigger.refresh(); }, 150); });
+  /* Salida de emergencia: si la ventana se vuelve altísima (captura de página entera) o se imprime, se enseña todo */
+  var shown = false;
+  function revealAll() {
+    if (shown) return; shown = true;
+    ScrollTrigger.getAll().forEach(function (s) { s.kill(); });
+    root.classList.remove('motion');
+    gsap.set('[data-reveal],.row .new,.row .old span,.w,.foot-in', { clearProps: 'all' });
+    d.querySelectorAll('[data-count]').forEach(function (el) { gsap.killTweensOf(el); if (el.getAttribute('data-final')) el.textContent = el.getAttribute('data-final'); });
+    d.querySelectorAll('.row .old span').forEach(function (s) { s.style.backgroundSize = '100% 2px'; s.style.opacity = '.5'; });
+    eagerImages();
+  }
+  window.addEventListener('beforeprint', revealAll);
+  var rt; window.addEventListener('resize', function () {
+    if (tall()) { revealAll(); return; }
+    clearTimeout(rt); rt = setTimeout(function () { layoutFooter(); ScrollTrigger.refresh(); }, 150);
+  });
 
   (d.fonts && d.fonts.ready ? d.fonts.ready : Promise.resolve()).then(function () { addMore(); layoutFooter(); ScrollTrigger.refresh(); });
   window.addEventListener('load', function () { layoutFooter(); ScrollTrigger.refresh(); });
